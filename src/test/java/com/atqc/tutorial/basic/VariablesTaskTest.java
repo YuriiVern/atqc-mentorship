@@ -2,6 +2,8 @@ package com.atqc.tutorial.basic;
 
 import org.testng.annotations.Test;
 
+import java.util.Arrays;
+
 public class VariablesTaskTest {
     @Test
     public void experimentWithVariables() {
@@ -74,6 +76,7 @@ public class VariablesTaskTest {
         System.out.println("Long value: " + myLong);
         System.out.println("String value: " + myString);
         System.out.println("First element of array: " + wordsArray[0]);
-        System.out.println("Matrix value: " + matrix);
+        System.out.println("Matrix value: " + Arrays.deepToString(matrix));
+        System.out.println("Matrix 1D: " + Arrays.toString(wordsArray));
     }
 }
