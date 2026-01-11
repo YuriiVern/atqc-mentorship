@@ -2,7 +2,7 @@ package com.atqc.tutorial.basic;
 
 import org.testng.annotations.Test;
 
-public class variablesTask1Basics {
+public class VariablesTaskTest {
     @Test
     public void experimentWithVariables() {
         // --- TASK 2: Create variables of different types ---
@@ -74,5 +74,6 @@ public class variablesTask1Basics {
         System.out.println("Long value: " + myLong);
         System.out.println("String value: " + myString);
         System.out.println("First element of array: " + wordsArray[0]);
+        System.out.println("Matrix value: " + matrix);
     }
 }
