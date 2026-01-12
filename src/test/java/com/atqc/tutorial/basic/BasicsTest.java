@@ -7,7 +7,7 @@ public class BasicsTest {
     @Test
     public void checkPrimitiveTypes() {
 
-        //#1 heck point
+        //#1 Check point
 
         long longValue = 123456123l;
         int intValue = 12345;
@@ -119,6 +119,95 @@ public class BasicsTest {
 
         //decrement
         System.out.println(--a);
+
+
+    }
+
+    @Test
+    public void checkConditions() {
+
+        //#1 Check point
+        boolean valueTrue = true;
+        boolean valueFalse = false;
+
+        boolean resultOfComparation;
+        resultOfComparation = valueTrue && valueFalse;
+        System.out.println(resultOfComparation);
+        System.out.println(!resultOfComparation);
+
+        resultOfComparation = valueTrue || valueFalse;
+        System.out.println(resultOfComparation);
+        System.out.println(!resultOfComparation);
+
+        //#2 Check point
+        int intValue2_2_1 = 10;
+        int intValue2_2_2 = 15;
+
+        System.out.println(intValue2_2_1 < 15);
+        System.out.println(intValue2_2_1 < 10);
+        System.out.println(intValue2_2_1 <= 15);
+        System.out.println(intValue2_2_1 <= 10);
+        System.out.println(intValue2_2_1 == 10);
+        System.out.println(intValue2_2_1 == 15);
+        System.out.println(intValue2_2_1 != 10);
+        System.out.println(intValue2_2_1 != 15);
+        System.out.println(intValue2_2_1 >= 5);
+        System.out.println(intValue2_2_1 >= 10);
+        System.out.println(intValue2_2_1 > 5);
+        System.out.println(intValue2_2_1 > 10);
+        System.out.println(intValue2_2_1 < intValue2_2_2);
+        System.out.println(intValue2_2_1 > intValue2_2_2);
+
+        //#3 Check point
+        int intValue2_3_1 = 10;
+        int intValue2_3_2 = 15;
+
+        //if, else
+
+        if(intValue2_3_1 == intValue2_3_2) {
+            System.out.println("value 1 and value 2 are equeal");
+        }
+        else{
+            System.out.println("value 1 and value 2 are not equeal");
+        }
+
+        // if, if else, else
+        if(intValue2_3_1 == intValue2_3_2) {
+            System.out.println("value 1 and value 2 are equeal");
+        }
+        else if (intValue2_3_1 > intValue2_3_2){
+            System.out.println("value 1 greater than value 2");
+        }
+        else {
+            System.out.println("value 1 less than value 2");
+        }
+
+        //Ternary operator
+
+        String resultOfVarComparation = (intValue2_3_1 >= intValue2_3_2) ? "value 1 equal or greater than value 2" : "value 1 less than value 2";
+        System.out.println(resultOfVarComparation);
+
+        //#4 Check point
+        int season = 3;
+
+        switch (season) {
+            case 1:
+                System.out.println("Winter");
+                break;
+            case 2:
+                System.out.println("Spring");
+                break;
+            case 3:
+                System.out.println("Summer");
+                break;
+            case 4:
+                System.out.println("Autumn");
+                break;
+            default:
+                System.out.println("Invalid season");
+        }
+
+
 
 
     }
