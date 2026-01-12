@@ -277,8 +277,49 @@ public class BasicsTest {
             }
             System.out.println("End of method");
 
+    }
 
+    @Test
+    public void checkString() {
 
+        //#1 Check point
+
+        String str1 = "Start of string";
+        String str2 = " end of string";
+
+        System.out.println(str1 + str2);
+        System.out.println("Text:" + str1 + str2);
+        System.out.println("Hello".concat(" World"));
+        System.out.println("string"+ 1);
+
+        //#2 Check point
+
+        String randomString = "      egweerw  ererferw  kuy  yu i      ";
+        System.out.println(randomString.length());
+        System.out.println(randomString.trim());
+        System.out.println(randomString.trim().length());
+
+        String[] words = randomString.trim().split(" ");
+
+        for (String word : words) {
+            System.out.println(word);
+        }
+
+        String modifiedRandomString = randomString.replace('e', 'E');
+        System.out.println(modifiedRandomString);
+
+        String stringToParse =  "this item previous price $5.99, Sale price $1.99.";
+
+        int firstDollar = stringToParse.indexOf('$');
+        int comma = stringToParse.indexOf(',');
+
+        int secondDollar = stringToParse.lastIndexOf('$');
+        int dot = stringToParse.lastIndexOf('.');
+
+        String oldPrice = stringToParse.substring(firstDollar + 1, comma);
+        String newPrice = stringToParse.substring(secondDollar + 1, dot);
+
+        System.out.println("Old price: " + oldPrice + " New price: " + newPrice);
 
     }
 }
