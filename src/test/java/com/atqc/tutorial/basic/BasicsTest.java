@@ -164,21 +164,18 @@ public class BasicsTest {
 
         //if, else
 
-        if(intValue2_3_1 == intValue2_3_2) {
+        if (intValue2_3_1 == intValue2_3_2) {
             System.out.println("value 1 and value 2 are equeal");
-        }
-        else{
+        } else {
             System.out.println("value 1 and value 2 are not equeal");
         }
 
         // if, if else, else
-        if(intValue2_3_1 == intValue2_3_2) {
+        if (intValue2_3_1 == intValue2_3_2) {
             System.out.println("value 1 and value 2 are equeal");
-        }
-        else if (intValue2_3_1 > intValue2_3_2){
+        } else if (intValue2_3_1 > intValue2_3_2) {
             System.out.println("value 1 greater than value 2");
-        }
-        else {
+        } else {
             System.out.println("value 1 less than value 2");
         }
 
@@ -206,6 +203,79 @@ public class BasicsTest {
             default:
                 System.out.println("Invalid season");
         }
+    }
+
+        @Test
+        public void checkLoops() {
+
+            //#1 Check point: Cycles while
+            int i = 0;
+            while (i < 10) {
+                System.out.println(i);
+                i++;
+            }
+
+            //#1 Check point:  Cycles do-while
+
+            i = 0;
+            do {
+                System.out.println(i);
+                i++;
+            } while (i < 10);
+
+
+            //#1-#2 Check point:  Cycles loop
+            for (int j = 0; j < 3; j++) {
+                System.out.println(j);
+            }
+
+            //#1 Check point:  Cycles for
+            int[] arr = {4, 5, 6};
+            for (int x : arr) {
+                System.out.println(x);
+            }
+
+            //#3 Check point:  Infinitive cycles
+            /*i = 0;
+            while (i >= 0) {
+                System.out.println(i);
+                i++;
+            }
+
+            i = 0;
+            do {
+                System.out.println(i);
+                i++;
+            } while (i >= 0);
+
+            for (int j = 0; j >= 0; j++) {
+                System.out.println(j);
+            }
+            */
+
+
+            //#4 Check point: Loops flow control
+            for (i = 1; i <= 5; i++) {
+                if (i == 3) {
+                    break;
+                }
+                System.out.println(i);
+            }
+
+            for (i = 1; i <= 5; i++) {
+                if (i == 3) {
+                    continue;
+                }
+                System.out.println(i);
+            }
+
+            for ( i = 1; i <= 5; i++) {
+                if (i == 3) {
+                    //return;
+                }
+                System.out.println(i);
+            }
+            System.out.println("End of method");
 
 
 
