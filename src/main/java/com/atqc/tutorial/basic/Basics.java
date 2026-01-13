@@ -1,7 +1,5 @@
 package com.atqc.tutorial.basic;
 
-import com.atqc.configuration.NotCompletedTaskException;
-
 public class Basics {
 
     /**
@@ -14,7 +12,9 @@ public class Basics {
      * reverse("qwerty") → "ytrewq"
      */
     public String reverse(String text) {
-        throw new NotCompletedTaskException();
+        return new StringBuilder(text)
+                .reverse()
+                .toString();
     }
 
 
@@ -29,7 +29,13 @@ public class Basics {
      * findMinValue([4,3,5,1]) → 1
      */
     public int findMinValue(int[] array) {
-        throw new NotCompletedTaskException();
+        int min = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] < min) {
+                min = array[i];
+            }
+        }
+        return min;
     }
 
     /**
@@ -42,7 +48,13 @@ public class Basics {
      * findMaxValue([5,3,21,6]) → 21
      */
     public int findMaxValue(int[] array) {
-        throw new NotCompletedTaskException();
+        int max = array[0];
+        for (int i = 1; i < array.length; i++) {
+            if (array[i] > max) {
+                max = array[i];
+            }
+        }
+        return max;
     }
 
     /**
@@ -55,8 +67,18 @@ public class Basics {
      * sortedArray([4,3,5,1]) → [1,3,4,5]
      */
     public int[] sortedArray(int[] array) {
-        throw new NotCompletedTaskException();
+        for (int i = 0; i < array.length; i++) {
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[i] > array[j]) {
+                    int temp = array[i];
+                    array[i] = array[j];
+                    array[j] = temp;
+                }
+            }
+        }
+        return array;
     }
+
 
     /**
      * Removes all occurrences of the given character from the array.
@@ -69,7 +91,22 @@ public class Basics {
      * skipArrayElement(['a','p','e'], 'p') → ['a','e']
      */
     public char[] skipArrayElement(char[] array, char elementToSkip) {
-        throw new NotCompletedTaskException();
+        int skippedArraySize = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != elementToSkip) {
+                skippedArraySize++;
+            }
+        }
+
+        char[] skippedArray = new char[skippedArraySize];
+        int currentIndex = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] != elementToSkip) {
+                skippedArray[currentIndex++] = array[i];
+            }
+
+        }
+        return skippedArray;
     }
 
 }
