@@ -44,7 +44,7 @@ public class VariablesTaskTest {
         // --- TASK 3: Try to assign weird values (Uncomment to see errors) ---
 
         // ERROR: Byte can only hold up to 127.
-        // byte hugeByte = 12321423123;
+        //byte hugeByte = 128;
         // EXPLANATION: IntelliJ underlines this in RED.
         // This is a "Compilation Error". The number is too big for the 'byte' box.
 
@@ -61,9 +61,10 @@ public class VariablesTaskTest {
         // You cannot put text into a number box.
 
         // 2. Assigning Int to String
-        // String name = 500;
+        //String name = 500;
         // EXPLANATION: Error. A String expects quotes "".
         // Correct way: String name = "500";
+
 
         // 3. Number to Char
         char letter = 65;
@@ -78,5 +79,28 @@ public class VariablesTaskTest {
         System.out.println("First element of array: " + wordsArray[0]);
         System.out.println("Matrix value: " + Arrays.deepToString(matrix));
         System.out.println("Matrix 1D: " + Arrays.toString(wordsArray));
+        //System.out.println("String wrong: " + name);
+
+        // 1. Create Arrays (Notice the [] and the 'f' suffix)
+        float[] floatValues = {0.5f, 0.7f, 1.0f, 0.1f};
+        double[] doubleValues = {0.5, 0.7, 1.0, 0.1};
+
+        // 2. Loop through them to compare pairs
+        for (int i = 0; i < floatValues.length; i++) {
+            float f = floatValues[i];
+            double d = doubleValues[i];
+
+            System.out.println("--- Comparing Index " + i + " ---");
+            System.out.println("Float:  " + f);
+            System.out.println("Double: " + d);
+
+            // Check if they are exactly the same
+            boolean isEqual = (f == d);
+            System.out.println("Are they equal? " + isEqual);
+            System.out.println(""); // Empty line for readability;
+
+
+        }
     }
+
 }
