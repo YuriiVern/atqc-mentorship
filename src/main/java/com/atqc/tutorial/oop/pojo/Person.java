@@ -1,4 +1,4 @@
-package com.atqc.tutorial.oop;
+package com.atqc.tutorial.oop.pojo;
 
 
 /**
