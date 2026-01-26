@@ -28,5 +28,10 @@ package com.atqc.tutorial.oop.inheritance;
 
 public interface Pet {
 
+    String getOwnerName();
+
+    void setOwnerName(String ownerName);
+
+
 
 }
